@@ -3,7 +3,7 @@
 ### **JavaScript:**
 - **Purpose:** JavaScript is a programming language used for creating interactive and dynamic websites. It can be used for everything from form validation to complex animations and handling asynchronous tasks.
 - **Core Technology:** JavaScript is a core web technology, alongside HTML and CSS. It's supported by all modern web browsers.
-- **Use Cases:** 
+- **Use Cases:**
   - Manipulating the DOM (Document Object Model).
   - Handling events (like clicks, keyboard inputs, etc.).
   - Performing API calls.
