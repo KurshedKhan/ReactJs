@@ -20,9 +20,9 @@ Bootstrap is a popular front-end framework used to design responsive and mobile-
    ```javascript
    import 'bootstrap/dist/css/bootstrap.min.css';
    ```
-   
+   Then Import Bootstrap JS (optional for things like dropdowns, modals):
    ```javascript
-   import 'bootstrap/dist/css/bootstrap.min.js';
+   import 'bootstrap/dist/js/bootstrap.bundle.min.js';
    ```
 3. **Using React-Bootstrap** (Component-based)  
    - Install it:
