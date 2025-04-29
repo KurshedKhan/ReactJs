@@ -20,7 +20,10 @@ Bootstrap is a popular front-end framework used to design responsive and mobile-
    ```javascript
    import 'bootstrap/dist/css/bootstrap.min.css';
    ```
-
+   
+   ```javascript
+   import 'bootstrap/dist/css/bootstrap.min.js';
+   ```
 3. **Using React-Bootstrap** (Component-based)  
    - Install it:
    ```bash
