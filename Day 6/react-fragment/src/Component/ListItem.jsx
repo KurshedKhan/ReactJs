@@ -1,12 +1,12 @@
 import Items from "./items";
-function ListItem({itemsList}) {
+function ListItem(props) {
 
   // const colorsList = ["Red","Green","Yellow","Blue","Black","White"];
 
   return (
     <>
       <ul className="list-group">
-        {itemsList.map((item, index) => (
+        {props.itemsList.map((item, index) => (
 
          <Items itemsNames={item} />
 
