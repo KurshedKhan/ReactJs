@@ -6,7 +6,7 @@ import EmptyList from "./Component/EmptyList";
 function App() {
 
   const colorsList = ["Red","Green","Yellow","Blue","Black","White"];
-  // const colorsList = [];
+  //const colorsList = [];
 
   // if(colorsList.length === 0){
 

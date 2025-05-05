@@ -1,0 +1,12 @@
+.buttonContainer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+button{
+  padding: 10px 20px;
+  margin: 2px;
+}
+.buttonEqual{
+  padding: 10px 30px;
+}

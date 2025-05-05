@@ -8,7 +8,7 @@ function ListItem(props) {
       <ul className="list-group">
         {props.itemsList.map((item, index) => (
 
-         <Items itemsNames={item} />
+         <Items key={index} itemsNames={item} />
 
         ))}
       </ul>
