@@ -5,12 +5,14 @@ import ButtonContainer from "./Component/ButtonContainer"
 function App() {
   
     const buttons = ["C","(",")","*","7","8","9","/","4","5","6","-","1","2","3","+","B",".","0","=",];
+    let isActive = true;
+    let isdark = false;
 
   return (
     <>
       <div className="container">
         <Input></Input>
-        <ButtonContainer btn={buttons} ></ButtonContainer>
+        <ButtonContainer btn={buttons} isActive1={isActive} isDark1={isdark}></ButtonContainer>
       </div>
     </>
   )
