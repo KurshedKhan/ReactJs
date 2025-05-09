@@ -8,6 +8,8 @@ import Input from "./Component/Input";
 function App() {
 
   const colorsList = ["Red","Green","Yellow","Blue","Black","White"];
+
+
   //const colorsList = [];
 
   // if(colorsList.length === 0){

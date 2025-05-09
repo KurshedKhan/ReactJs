@@ -1,17 +1,13 @@
 import classes from "./Items.module.css"
 
-function Items({itemsNames}){
+function Items({itemsNames,buyButton}){
 
-  const buyButton = (event) => {
-    console.log(event.target.innerText)
-    console.log(`color name is ${itemsNames}  available.`)
-  }
 
 
   return (
     <li className="list-group-item">
       <span>{itemsNames}</span>
-      <button className={classes.btn} onClick={(event)=>buyButton(event)} >Buy</button>
+      <button className={classes.btn} onClick={()=>buyButton(itemsNames)} >Buy</button>
     </li>
   );
 }
