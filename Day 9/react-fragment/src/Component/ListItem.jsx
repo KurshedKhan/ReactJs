@@ -1,10 +1,14 @@
+import { useState } from "react";
 import Items from "./items";
 function ListItem(props) {
 
-  const buyButton = (itemsNames1) => {
+  let [activeItem,setActiveItem] = useState([])
 
-    console.log(`color name is ${itemsNames1} available.`)
-
+  const buyButton = (value) => {
+    // let totalItemsArray = [...activeItem,value]
+    // setActiveItem(totalItemsArray)
+    // console.log("new items ",value)
+    setActiveItem(value)
   }
   // const colorsList = ["Red","Green","Yellow","Blue","Black","White"];
 
@@ -14,7 +18,7 @@ function ListItem(props) {
         {
           props.itemsList.map((item, index) => (
             
-         <Items key={index} itemsNames={item} buyButton={buyButton} />
+         <Items key={index} isActive={activeItem.includes(item)} set1={item} buyButton={buyButton} />
           
         ))}
       </ul>

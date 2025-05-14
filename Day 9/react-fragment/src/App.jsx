@@ -10,7 +10,7 @@ function App() {
 
   let [textShow,setTextShow] = useState("This is your items ")
 
-  let [colorsList , setColorList] = useState([])
+  let [colorsList , setColorList] = useState(["Red","Pink"])
   const handleOnKeyDown = (event) =>{
    if(event.key === "Enter" && !(event.target.value == "")){
     let newItem = event.target.value;
