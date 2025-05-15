@@ -1,0 +1,23 @@
+.buttonContainer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+button{
+  padding: 10px 20px;
+  margin: 2px;
+}
+.buttonEqual{
+  padding: 10px 30px;
+}
+.bgColor{
+  background-color: gray;
+}
+.button1{
+  background-color: green;
+  color: white;
+}
+.button2{
+  background-color: black;
+  color: white;
+}
