@@ -22,8 +22,9 @@ function App() {
   const [itemList,setItemList] = useState(itemList1)
 
   const handleInputButton = (name,date2) =>{
-    let newItemsList = [...itemList,{taskName:name,date:date2}]
-    setItemList(newItemsList);
+    
+    setItemList((currentValue)=>[...currentValue,{taskName:name,date:date2}]);
+
   }
 
   const handleDeleteButton = (myIndex) =>{
