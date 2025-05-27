@@ -1,7 +1,14 @@
 import React from 'react'
+import { NavBar } from './NavBar'
+import {Outlet} from "react-router-dom"
+
 
 export const About = () => {
   return (
-    <div>About</div>
+    <>
+      <NavBar></NavBar>
+      <div>About</div>
+      <Outlet/>
+    </>
   )
 }

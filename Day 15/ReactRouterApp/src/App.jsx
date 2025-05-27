@@ -3,7 +3,11 @@ import { Home } from "./Components/Home";
 import { About } from "./Components/About";
 import { Contact } from "./Components/Contact";
 import { Service } from "./Components/Service";
-import { NavBar } from "./Components/NavBar";
+import { About1 } from "./Components/About1";
+import { About2 } from "./Components/About2";
+import { About3 } from "./Components/About3";
+import { ErrorHandle } from "./Components/ErrorHandle";
+
 
 function App() {
 
@@ -11,38 +15,43 @@ function App() {
     [
       {
         path:"/",
-        element:<div>
-          <NavBar/>
-          <Home/>
-        </div>
+        element:<Home/>
       },
       {
         path:"/about",
-        element:<div>
-          <NavBar/>
-          <About/>
-        </div>
+        element:<About/>,
+        children:[
+          { 
+            path:"about1",
+            element:<About1/>
+          },
+          {
+            path:"about2",
+            element:<About2/>
+          },
+          {
+            path:"about3",
+            element:<About3/>
+          }
+        ]
       },
       {
         path:"/contact",
-        element:<div>
-          <NavBar/>
-          <Contact/>
-        </div>
+        element:<Contact/>
       },
       {
         path:"/service",
-        element:<div>
-          <NavBar/>
-          <Service/>
-        </div>
+        element:<Service/>
+      },
+      {
+        path:"*",
+        element:<ErrorHandle/>
       }
     ]
   );
 
   return (
     <>
-      <h1>Hello Dear Jee</h1>
       <RouterProvider router={router} />
     </>
   )
