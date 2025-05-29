@@ -1,14 +1,12 @@
 import { useForm } from "react-hook-form";
-
+import "./App.css"
 function App() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  const {register,handleSubmit,reset, formState: { isSubmitting,errors }} = useForm();
 
-  function onSubmit1(data) {
+  async function onSubmit1(data) {
+
+    await new Promise((resolve)=>setTimeout(resolve,5000))
+    
     console.log("My form data is : ", data);
     reset();
   }
@@ -25,13 +23,13 @@ function App() {
             {...register("FirstName", {
               required: true,
               minLength: { value: 3, message: "Min 3 character length" },
+              pattern:{value: /^(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/i,message : "Upper Case" },
               maxLength: 10,
             })}
             placeholder="First Name"
           />
         </div>
-        <br />
-        {errors.FirstName && <p>{errors.FirstName.message}</p>}
+        {errors.FirstName && <p className="error-msg">{errors.FirstName.message}</p>}<br></br>
         <div>
           <label>Middle Name</label>
           <br />
@@ -45,8 +43,8 @@ function App() {
             placeholder="Middle Name"
           />
         </div>
-        <br />
-          {errors.MiddleName && <p>{errors.MiddleName.message}</p>}
+          {errors.MiddleName && <p className="error-msg">{errors.MiddleName.message}</p>}
+          <br />
         <div>
           <label>Last Name</label>
           <br />
@@ -54,16 +52,18 @@ function App() {
             type="text"
             {...register("LastName", {
               required: true,
-              minLength: { value: 3, message: "Min 3 character length" },
-              maxLength: 10,
+              pattern: {value : /^[A-Za-z]+$/i , message: "only character" },
+              minLength:{value : 3,message:"Min 3 character length."},
+              maxLength: 10
             })}
             placeholder="Last Name"
           />
         </div>
-        <br />
-          {errors.LastName && <p>{errors.LastName.message}</p>}
+          {errors.LastName && <p className="error-msg">{errors.LastName.message}</p>} <br />
         <div>
-          <input type="submit" />
+          <button type="submit" disabled={isSubmitting} >
+          {isSubmitting ? "Please wait..." : "Submit"}
+          </button>
         </div>
       </form>
     </>
